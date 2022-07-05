@@ -10,3 +10,54 @@
 #players-move, #computers-move {
     margin-left: 10px;
 }
+
+
+.header, .move, .moves, #kamień, #papier, #nożyce, .pmove, #result, #players-move, #computers-move, #results {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(175, 10, 10);
+    text-shadow: 2px 2px #f3d219;
+}
+
+.pmove {
+    text-align: center;
+}
+
+.strona {
+    background-color: black;
+    height: 80vh;
+}
+
+.ikona {
+    text-shadow: 2px 2px #f3d219;
+    font-size: 300px;
+    color: rgb(221, 15, 15);
+    text-align: center;
+    padding-top: 50px;
+    transform: rotate(30deg)
+    
+}
+
+.ikona1 {
+    font-size: 300px;
+    color: rgb(221, 15, 15);
+    text-align: right;
+    padding-top: 50px;
+    padding-left: 100px;
+    text-shadow: 2px 2px #f3d219;
+}
+
+.ikona2 {
+    font-size: 300px;
+    color: rgb(221, 15, 15);
+    text-align: left;
+    padding-top: 50px;
+    padding-right: 100px;
+    text-shadow: 2px 2px #f3d219;
+}
+
+.ikony {
+    display: flex;
+    justify-content: space-between;
+}
