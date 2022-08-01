@@ -1,8 +1,15 @@
-function createRandomMove(){
-	const randomNumber = Math.floor(Math.random() * 3 + 1);
-	if(randomNumber === 1) return 'kamień';
-	else if(randomNumber === 2) return 'nożyce';
-	else if(randomNumber === 3) return 'papier';
+function createRandomMove(playersMove){
+	const randomNumber = Math.floor(Math.random() * 4 + 1);
+	if(randomNumber > 3){
+		if(playersMove === 'papier') return 'kamień';
+		else if(playersMove === 'kamień') return 'nożyce';
+		else return 'papier';
+	}
+	else {
+		if(playersMove === 'papier') return 'nożyce';
+		else if(playersMove === 'kamień') return 'papier';
+		else return 'kamień';
+	}
 }
 
 function displayMoves(playersMove, computersMove){
@@ -22,17 +29,10 @@ function displayResult(playersMove, computersMove){
 }
 
 
-
-
-const kamień = document.querySelector("#kamień");
-const papier = document.querySelector("#papier");
-const nożyce = document.querySelector("#nożyce");
-
-
-
 kamień.addEventListener("click", function(){
 	console.log(this.id)
-	const randomMove = createRandomMove();
+	kamień = document.querySelector("#kamień");
+	const randomMove = createRandomMove('kamień');
 	displayMoves(this.id, randomMove)
 	displayResult(this.id, randomMove)
 
@@ -40,14 +40,16 @@ kamień.addEventListener("click", function(){
 
 papier.addEventListener("click", function(){
 	console.log(this.id)
-	const randomMove = createRandomMove();
+	papier = document.querySelector("#papier");
+	const randomMove = createRandomMove('papier');
 	displayMoves(this.id, randomMove)
 	displayResult(this.id, randomMove)
 })
 
 nożyce.addEventListener("click", function(){
 	console.log(this.id)
-	const randomMove = createRandomMove();
+	nożyce = document.querySelector("#nożyce");
+	const randomMove = createRandomMove('nożyce');
 	displayMoves(this.id, randomMove)
 	displayResult(this.id, randomMove)
 })
